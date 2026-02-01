@@ -9,10 +9,35 @@
         content="Torne-se um Closer Digital e fature de R$5.000 a R$20.000 por mês em 2026. Método validado com mais de R$40 milhões em vendas.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy:wght@700&family=Inter:wght@400;500;600;700&display=swap">
     <link
-        href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy:wght@700&family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+        href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy:wght@700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy:wght@700&family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+    </noscript>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--color-bg-dark:#0a0b10;--color-bg-secondary:#0f1015;--color-accent-gold:#f1c40f;--color-cta-green:#20b30d;--color-text-white:#FFFFFF;--color-text-gray:#C0C0C0;--color-border:rgba(241,196,15,0.2);--color-glow-blue:rgba(30,90,180,0.4);--font-heading:'Poltawski Nowy',serif;--font-body:'Inter',sans-serif;--section-padding:80px 20px;--container-max-width:1200px}
+        body{font-family:var(--font-body);background:var(--color-bg-dark);color:var(--color-text-white);line-height:1.6;overflow-x:hidden}
+        .container{max-width:var(--container-max-width);margin:0 auto;padding:0 20px}
+        section{padding:var(--section-padding)}
+        .hero-section{position:relative;min-height:100vh;display:flex;align-items:center;background:var(--color-bg-dark)}
+        .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,10,26,0.95) 0%,rgba(10,10,26,0.85) 100%)}
+        .hero-content{position:relative;z-index:2;max-width:900px;text-align:left}
+        .hero-label{color:var(--color-accent-gold);font-size:0.875rem;font-weight:700;letter-spacing:3px;margin-bottom:1rem;text-transform:uppercase}
+        .hero-title{font-family:var(--font-heading);font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;line-height:1.15;margin-bottom:1.5rem}
+        .highlight{color:var(--color-accent-gold)}
+        .hero-subtitle{font-size:clamp(0.95rem,1.8vw,1.125rem);color:var(--color-text-gray);margin-bottom:2rem;line-height:1.7}
+        .cta-button{display:inline-block;padding:18px 48px;font-size:1rem;font-weight:700;text-decoration:none;border-radius:8px;transition:all .3s ease;text-align:center;cursor:pointer;border:none;font-family:var(--font-body);text-transform:uppercase;letter-spacing:1px}
+        .cta-primary{background:var(--color-cta-green);color:var(--color-text-white);box-shadow:0 8px 24px rgba(32,179,13,0.4)}
+        .hero-support{margin-top:1rem;font-size:0.875rem;color:var(--color-text-gray)}
+    </style>
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
 </head>
 
 <body>
@@ -84,7 +109,7 @@
                     class="highlight">acesso direto às melhores oportunidades</strong>. É exatamente isso que a Formação
                 Closer 360 entrega.</p>
             <div class="solution-logo">
-                <img src="logo-closer-360-transparent.webp" alt="Formação Closer 360 Logo">
+                <img src="logo-closer-360-transparent.webp" alt="Formação Closer 360 Logo" loading="lazy" width="250" height="250">
             </div>
             <p class="solution-description">A <strong>Formação Closer 360</strong> é o único programa prático e imersivo
                 desenhado para transformar você em um profissional de vendas digitais completo. Não é um curso, é uma
@@ -153,7 +178,7 @@
             <h2 class="section-title">Jezreel Soares: O Mentor que Vive o Campo de Batalha</h2>
             <div class="mentor-content">
                 <div class="mentor-image">
-                    <img src="jez-bio.webp" alt="Jezreel Soares">
+                    <img src="jez-bio.webp" alt="Jezreel Soares" loading="lazy" width="400" height="400">
                 </div>
                 <div class="mentor-text">
                     <p>Jezreel Soares não é um teórico. É um empresário, vendedor e um dos maiores formadores de Closers
@@ -173,20 +198,23 @@
             <h2 class="section-title">Pessoas Comuns que Sairam do Zero e Hoje Vivem de Vendas no Digital</h2>
             <div class="video-testimonials-grid">
                 <div class="video-testimonial-card">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/PTNLOgCFC7U" title="Depoimento Mirian" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="video-wrapper video-facade" data-video-id="PTNLOgCFC7U">
+                        <img src="https://i.ytimg.com/vi/PTNLOgCFC7U/hqdefault.jpg" alt="Depoimento Mirian" loading="lazy" width="480" height="360">
+                        <button class="video-play-btn" aria-label="Reproduzir vídeo"><svg viewBox="0 0 68 48" width="68" height="48"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="red"/><path d="M45 24L27 14v20" fill="white"/></svg></button>
                     </div>
                     <p class="video-testimonial-text">"Eu faço medicina, estou no 4º ano [...] Esse mês que eu entrei no curso, bati a meta 3 semanas seguidas [...] Eu tirei R$5.664,00 e me dedico 2/3h por dia."</p>
                 </div>
                 <div class="video-testimonial-card">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/zhr_Jfdtybo" title="Depoimento Kely" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="video-wrapper video-facade" data-video-id="zhr_Jfdtybo">
+                        <img src="https://i.ytimg.com/vi/zhr_Jfdtybo/hqdefault.jpg" alt="Depoimento Kely" loading="lazy" width="480" height="360">
+                        <button class="video-play-btn" aria-label="Reproduzir vídeo"><svg viewBox="0 0 68 48" width="68" height="48"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="red"/><path d="M45 24L27 14v20" fill="white"/></svg></button>
                     </div>
                     <p class="video-testimonial-text">"Eu sou mãe atípica, trabalho com vendas, com minha filha do lado. Eu era dependente financeira e através das vendas, me tornei totalmente independente [...] Faturando 7, 8, 6 mil, e com possibilidade de faturar mais."</p>
                 </div>
                 <div class="video-testimonial-card">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/yFrWqinbago" title="Depoimento Marcos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="video-wrapper video-facade" data-video-id="yFrWqinbago">
+                        <img src="https://i.ytimg.com/vi/yFrWqinbago/hqdefault.jpg" alt="Depoimento Marcos" loading="lazy" width="480" height="360">
+                        <button class="video-play-btn" aria-label="Reproduzir vídeo"><svg viewBox="0 0 68 48" width="68" height="48"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="red"/><path d="M45 24L27 14v20" fill="white"/></svg></button>
                     </div>
                     <p class="video-testimonial-text">"Antes de entrar na área das vendas eu era CLT [...] Eu ganhava R$3 mil/ R$3.500 em média [...] Hoje eu sou supervisor pleno e tiro uma média de 8 a 12 mil por mês, em mês de lançamento eu tiro o dobro."</p>
                 </div>
@@ -289,7 +317,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
