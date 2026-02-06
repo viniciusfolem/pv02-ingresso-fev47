@@ -177,6 +177,7 @@ section:not(.hero-section) .fade-in.visible {
     line-height: 1.25;
     color: var(--color-text-white);
     text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    text-wrap: balance;
 }
 
 .section-title-large {
@@ -187,6 +188,7 @@ section:not(.hero-section) .fade-in.visible {
     margin-bottom: 2rem;
     color: var(--color-text-white);
     text-shadow: 0 2px 30px rgba(0, 0, 0, 0.5);
+    text-wrap: balance;
 }
 
 .highlight {
@@ -319,6 +321,7 @@ section:not(.hero-section) .fade-in.visible {
     margin-bottom: 1.5rem;
     color: var(--color-text-white);
     text-shadow: 0 2px 30px rgba(0, 0, 0, 0.5);
+    text-wrap: balance;
 }
 
 .hero-subtitle {
@@ -326,6 +329,7 @@ section:not(.hero-section) .fade-in.visible {
     color: var(--color-text-gray);
     margin-bottom: 1.5rem;
     font-weight: 400;
+    text-wrap: balance;
 }
 
 .hero-description {
@@ -336,6 +340,7 @@ section:not(.hero-section) .fade-in.visible {
     margin-left: auto;
     margin-right: auto;
     line-height: 1.7;
+    text-wrap: pretty;
 }
 
 .hero-date {
@@ -470,6 +475,7 @@ section:not(.hero-section) .fade-in.visible {
     color: var(--color-accent-gold);
     margin-bottom: 3rem;
     text-shadow: 0 0 30px rgba(241, 196, 15, 0.4);
+    text-wrap: balance;
 }
 
 .context {
@@ -483,6 +489,7 @@ section:not(.hero-section) .fade-in.visible {
     font-size: 1.2rem;
     color: var(--color-text-white);
     margin: 3rem 0;
+    text-wrap: pretty;
 }
 
 /* ===== CHECK LIST ===== */
@@ -504,6 +511,7 @@ section:not(.hero-section) .fade-in.visible {
     border-radius: 12px;
     border: 1px solid transparent;
     transition: all 0.3s ease;
+    text-wrap: pretty;
 }
 
 .check-list li:hover {
@@ -603,6 +611,7 @@ section:not(.hero-section) .fade-in.visible {
     color: var(--color-text-light);
     line-height: 1.9;
     margin-bottom: 1.25rem;
+    text-wrap: pretty;
 }
 
 .autoridade-text .destaque {
@@ -625,12 +634,14 @@ section:not(.hero-section) .fade-in.visible {
     padding-left: 2.25rem;
     position: relative;
     line-height: 1.7;
+    text-wrap: pretty;
 }
 
 .credenciais li .check-icon {
     position: absolute;
     left: 0;
-    top: 2px;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 1rem;
 }
 
@@ -741,6 +752,7 @@ section:not(.hero-section) .fade-in.visible {
     font-style: italic;
     text-align: center;
     border-top: 1px solid var(--color-border);
+    text-wrap: pretty;
 }
 
 /* ===== BREAKDOWN SECTION ===== */
@@ -818,6 +830,7 @@ section:not(.hero-section) .fade-in.visible {
     font-size: 1.05rem;
     color: var(--color-text-light);
     line-height: 1.7;
+    text-wrap: pretty;
 }
 
 /* ===== OFERTA SECTION ===== */
@@ -857,6 +870,7 @@ section:not(.hero-section) .fade-in.visible {
     font-size: 1.05rem;
     color: var(--color-text-gray);
     margin-bottom: 2.5rem;
+    text-wrap: pretty;
 }
 
 .transicao {
@@ -866,6 +880,7 @@ section:not(.hero-section) .fade-in.visible {
     color: var(--color-text-white);
     margin-bottom: 1.25rem;
     text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    text-wrap: balance;
 }
 
 .intro-preco {
@@ -957,6 +972,7 @@ section:not(.hero-section) .fade-in.visible {
     font-size: 1.1rem;
     color: var(--color-text-light);
     line-height: 1.8;
+    text-wrap: pretty;
 }
 
 /* ===== FAQ SECTION ===== */
@@ -1075,6 +1091,7 @@ section:not(.hero-section) .fade-in.visible {
     border-radius: 12px;
     border: 1px solid rgba(239, 68, 68, 0.2);
     transition: all 0.3s ease;
+    text-wrap: pretty;
 }
 
 .exclusion-list li:hover {
@@ -1094,6 +1111,7 @@ section:not(.hero-section) .fade-in.visible {
     font-size: 1.3rem;
     color: var(--color-text-white);
     margin-bottom: 3rem;
+    text-wrap: pretty;
 }
 
 /* ===== ULTIMA CHAMADA SECTION ===== */
@@ -1127,6 +1145,7 @@ section:not(.hero-section) .fade-in.visible {
     color: var(--color-text-light);
     margin-bottom: 1.25rem;
     line-height: 1.6;
+    text-wrap: pretty;
 }
 
 .urgencia-copy p strong {
@@ -1210,11 +1229,11 @@ section:not(.hero-section) .fade-in.visible {
 
 @media (max-width: 768px) {
     :root {
-        --section-padding: 70px 20px;
+        --section-padding: 60px 16px;
     }
 
     .hero-section {
-        padding: 50px 20px 70px;
+        padding: 50px 16px 60px;
         min-height: auto;
     }
 
@@ -1222,24 +1241,61 @@ section:not(.hero-section) .fade-in.visible {
         font-size: 2.1rem;
     }
 
+    .hero-description {
+        font-size: 1rem;
+        padding: 0 8px;
+    }
+
+    .transicao {
+        font-size: 1.3rem;
+        padding: 0 8px;
+    }
+
+    .ancoragem {
+        font-size: 1.3rem;
+    }
+
+    .subheadline-oferta {
+        font-size: 0.95rem;
+        padding: 0 8px;
+    }
+
+    .intro-preco {
+        font-size: 1.1rem;
+    }
+
     .video-testimonials-grid {
         grid-template-columns: 1fr;
-        max-width: 450px;
+        max-width: 400px;
     }
 
     .garantia-box {
         flex-direction: column;
         text-align: center;
-        gap: 1.5rem;
+        gap: 1.25rem;
+        padding: 2rem 1.5rem;
     }
 
     .garantia-content {
         text-align: center;
     }
 
+    .garantia-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .garantia-content p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        max-width: 100%;
+        width: 100%;
+    }
+
     .cta-gigante {
         font-size: 1rem;
-        padding: 20px 32px;
+        padding: 20px 24px;
     }
 
     .countdown-timer-large .countdown-item {
@@ -1264,34 +1320,88 @@ section:not(.hero-section) .fade-in.visible {
         gap: 1.25rem;
     }
 
+    .modulo-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .modulo-content p {
+        font-size: 0.95rem;
+    }
+
     .floating-cta {
         display: block;
     }
 
     body {
-        padding-bottom: 100px;
+        padding-bottom: 90px;
     }
 
     .check-list li,
     .exclusion-list li {
         padding: 14px 14px 14px 3rem;
-        font-size: 1.05rem;
+        font-size: 1rem;
     }
 
     .check-icon,
     .x-icon {
         left: 12px;
     }
+
+    .conclusion {
+        font-size: 1.05rem;
+        padding: 0 8px;
+    }
+
+    .conclusao-reversa {
+        font-size: 1.1rem;
+        padding: 0 8px;
+    }
+
+    .context {
+        font-size: 1.05rem;
+    }
+
+    .autoridade-text h3 {
+        font-size: 1.6rem;
+    }
+
+    .autoridade-text .destaque {
+        font-size: 1.25rem;
+    }
+
+    .credenciais li {
+        font-size: 0.95rem;
+    }
+
+    .faq-question {
+        font-size: 1.05rem;
+        padding: 1.5rem;
+    }
+
+    .urgencia-box {
+        padding: 2rem 1.5rem;
+    }
 }
 
 @media (max-width: 480px) {
     .hero-section {
-        padding: 40px 16px 60px;
+        padding: 36px 14px 50px;
         min-height: auto;
     }
 
     .hero-title {
         font-size: 1.85rem;
+        padding: 0 4px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+        padding: 0 12px;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        padding: 0 4px;
     }
 
     .badge-destaque {
@@ -1305,37 +1415,54 @@ section:not(.hero-section) .fade-in.visible {
     }
 
     .section-title {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         margin-bottom: 2rem;
+        padding: 0 4px;
     }
 
     .cta-button {
-        padding: 16px 24px;
+        padding: 16px 20px;
         font-size: 0.85rem;
         border-radius: 10px;
     }
 
     .cta-large {
-        padding: 18px 28px;
+        padding: 18px 24px;
+    }
+
+    .cta-gigante {
+        font-size: 0.9rem;
+        padding: 18px 20px;
     }
 
     .modulo-item {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 1.25rem;
     }
 
     .modulo-icon {
-        width: 50px;
-        height: 50px;
+        width: 44px;
+        height: 44px;
+        font-size: 1.5rem;
+    }
+
+    .modulo-content h3 {
+        font-size: 1rem;
+    }
+
+    .modulo-content p {
+        font-size: 0.9rem;
     }
 
     .countdown-box {
-        padding: 14px 20px;
+        padding: 12px 16px;
+        width: 100%;
     }
 
     .countdown-timer {
-        gap: 10px;
+        gap: 8px;
     }
 
     .countdown-item {
@@ -1352,19 +1479,87 @@ section:not(.hero-section) .fade-in.visible {
     }
 
     .urgencia-box,
-    .garantia-box,
     .countdown-final {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem 1.25rem;
+    }
+
+    .garantia-box {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .garantia-icon {
+        font-size: 3rem;
+    }
+
+    .garantia-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .garantia-content p {
+        font-size: 0.95rem;
     }
 
     .faq-question {
-        padding: 1.5rem;
-        font-size: 1.05rem;
+        padding: 1.25rem;
+        font-size: 0.95rem;
+        gap: 12px;
     }
 
     .faq-answer p {
-        padding: 0 1.5rem 1.5rem;
-        font-size: 1rem;
+        padding: 0 1.25rem 1.25rem;
+        font-size: 0.95rem;
+    }
+
+    .transicao {
+        font-size: 1.15rem;
+    }
+
+    .ancoragem {
+        font-size: 1.15rem;
+    }
+
+    .urgencia-copy p {
+        font-size: 1.05rem;
+    }
+
+    .check-list li,
+    .exclusion-list li {
+        padding: 12px 12px 12px 2.75rem;
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+
+    .check-icon,
+    .x-icon {
+        left: 10px;
+        font-size: 1.1rem;
+    }
+
+    .video-testimonial-text {
+        padding: 1.25rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-date {
+        font-size: 0.9rem;
+        letter-spacing: 1.5px;
+    }
+
+    .price-discount {
+        font-size: 0.8rem;
+    }
+
+    .forma-pagamento {
+        font-size: 0.95rem;
+    }
+
+    .preco-gigante {
+        font-size: 2.75rem;
+    }
+
+    .floating-cta .cta-button {
+        font-size: 0.85rem;
+        padding: 16px 20px;
     }
 }
 
