@@ -111,7 +111,7 @@
       <div class="vsl-container" id="vslContainer">
         <vturb-smartplayer id="vid-69661328da723d6f868bab31" style="display:block;margin:0 auto;width:100%;"></vturb-smartplayer>
       </div>
-      <a href="#checkout" class="btn-cta hidden" id="btnCta" role="button" rel="noopener">GARANTIR MINHA VAGA POR R$ 47</a>
+      <a href="https://chk.eduzz.com/3fcgzzbz" class="btn-cta hidden" id="btnCta" role="button" rel="noopener" target="_blank">GARANTIR MINHA VAGA POR R$ 47</a>
       <p class="urgency-text hidden" id="urgencyText" aria-hidden="true"></p>
       <p class="guarantee-text hidden" id="guaranteeText">Garantia de 7 dias ou seu dinheiro de volta</p>
     </section>
@@ -171,32 +171,32 @@
     .loading-pct{font-size:14px;font-weight:700;color:#10B981;margin-top:8px;transition:opacity .25s ease}
 
     /* ===== RESULT ===== */
-    #result{background:#F9FAFB;min-height:100vh;min-height:100dvh;flex-direction:column;align-items:center;padding:32px 16px;padding-top:max(32px,env(safe-area-inset-top,32px));padding-bottom:max(28px,env(safe-area-inset-bottom,28px));overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;position:relative}
-    .result-logo{margin-bottom:24px;font-size:18px;font-weight:700;color:#10B981;letter-spacing:-.5px;z-index:1}
-    .result-badge{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;margin-bottom:16px;border:3px solid;animation:bp .5s cubic-bezier(.175,.885,.32,1.275) forwards;will-change:transform;z-index:1}
+    #result{background:#F9FAFB;height:100vh;height:100dvh;flex-direction:column;align-items:center;padding:12px 12px;padding-top:max(12px,env(safe-area-inset-top,12px));padding-bottom:max(8px,env(safe-area-inset-bottom,8px));overflow:hidden;position:relative;justify-content:center}
+    .result-logo{margin-bottom:8px;font-size:16px;font-weight:700;color:#10B981;letter-spacing:-.5px;z-index:1}
+    .result-badge{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:8px;border:3px solid;animation:bp .5s cubic-bezier(.175,.885,.32,1.275) forwards;will-change:transform;z-index:1}
     .result-badge.qualified{background:#ECFDF5;color:#047857;border-color:#10B981}
     .result-badge.partial{background:#FFF7ED;color:#B45309;border-color:#F59E0B}
     .result-badge.disqualified{background:#FEF2F2;color:#DC2626;border-color:#EF4444}
-    .result-headline{font-size:clamp(20px,5vw,32px);font-weight:700;text-align:center;margin-bottom:8px;max-width:600px;line-height:1.2;animation:fs .6s ease .15s both;padding:0 4px;z-index:1}
+    .result-headline{font-size:clamp(16px,4.2vw,28px);font-weight:700;text-align:center;margin-bottom:4px;max-width:600px;line-height:1.2;animation:fs .6s ease .15s both;padding:0 4px;z-index:1}
     .result-headline.qualified{color:#047857}.result-headline.partial{color:#B45309}.result-headline.disqualified{color:#DC2626}
-    .result-subheadline{font-size:clamp(13px,3.2vw,16px);color:#4B5563;text-align:center;margin-bottom:16px;max-width:500px;line-height:1.5;animation:fs .6s ease .3s both;padding:0 4px;z-index:1}
+    .result-subheadline{font-size:clamp(11px,2.8vw,15px);color:#4B5563;text-align:center;margin-bottom:8px;max-width:500px;line-height:1.4;animation:fs .6s ease .3s both;padding:0 4px;z-index:1}
 
     /* Result Stats Pills */
-    .result-stats{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:20px;animation:fs .6s ease .35s both;z-index:1}
-    .stat-pill{background:#FFF;border:1px solid #E5E7EB;border-radius:20px;padding:6px 14px;font-size:12px;font-weight:600;color:#1F2937;display:flex;align-items:center;gap:4px}
-    .stat-pill .stat-icon{font-size:14px}
+    .result-stats{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-bottom:8px;animation:fs .6s ease .35s both;z-index:1}
+    .stat-pill{background:#FFF;border:1px solid #E5E7EB;border-radius:20px;padding:4px 10px;font-size:11px;font-weight:600;color:#1F2937;display:flex;align-items:center;gap:3px}
+    .stat-pill .stat-icon{font-size:12px}
 
-    .vsl-container{max-width:800px;width:100%;margin-bottom:20px;border-radius:12px;overflow:hidden;box-shadow:0 8px 16px -4px rgba(0,0,0,.1);background:#000;display:block;animation:fs .6s ease .4s both;z-index:1}
-    .vsl-container vturb-smartplayer{display:block;width:100%}
-    .btn-cta.hidden,.urgency-text.hidden,.guarantee-text.hidden{opacity:0;pointer-events:none;transform:translate3d(0,12px,0);animation:none}
+    .vsl-container{max-width:800px;width:100%;flex:1;min-height:0;border-radius:10px;overflow:hidden;box-shadow:0 8px 16px -4px rgba(0,0,0,.1);background:#000;display:flex;align-items:center;justify-content:center;animation:fs .6s ease .4s both;z-index:1;margin-bottom:8px}
+    .vsl-container vturb-smartplayer{display:block;width:100%;height:100%}
+    .btn-cta.hidden,.urgency-text.hidden,.guarantee-text.hidden{opacity:0;height:0;margin:0;padding:0;min-height:0;overflow:hidden;pointer-events:none;animation:none}
     .btn-cta.reveal,.urgency-text.reveal,.guarantee-text.reveal{animation:ctaReveal .6s ease forwards}
-    @keyframes ctaReveal{from{opacity:0;transform:translate3d(0,16px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
-    .btn-cta{background:#10B981;color:#FFF;font-size:16px;font-weight:700;padding:16px 28px;border-radius:12px;border:none;cursor:pointer;box-shadow:0 4px 12px -2px rgba(16,185,129,.35);max-width:400px;width:100%;text-align:center;font-family:inherit;text-decoration:none;min-height:52px;display:flex;align-items:center;justify-content:center;touch-action:manipulation;-webkit-user-select:none;user-select:none;z-index:1}
+    @keyframes ctaReveal{from{opacity:0;transform:translate3d(0,10px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+    .btn-cta{background:#10B981;color:#FFF;font-size:15px;font-weight:700;padding:14px 24px;border-radius:12px;border:none;cursor:pointer;box-shadow:0 4px 12px -2px rgba(16,185,129,.35);max-width:400px;width:100%;text-align:center;font-family:inherit;text-decoration:none;min-height:48px;display:flex;align-items:center;justify-content:center;touch-action:manipulation;-webkit-user-select:none;user-select:none;z-index:1;flex-shrink:0}
     .btn-cta.reveal{animation:ctaReveal .6s ease forwards,ctaPulse 2s ease-in-out .8s infinite}
     .btn-cta:active{background:#059669;transform:scale(.97);animation:none}
     @keyframes ctaPulse{0%,100%{transform:scale(1);box-shadow:0 4px 12px -2px rgba(16,185,129,.35)}50%{transform:scale(1.03);box-shadow:0 6px 24px -2px rgba(16,185,129,.5)}}
-    .urgency-text{font-size:13px;color:#DC2626;font-weight:600;text-align:center;margin-top:10px;animation:fs .6s ease .65s both;z-index:1;display:flex;align-items:center;gap:4px;justify-content:center}
-    .guarantee-text{font-size:12px;color:#4B5563;text-align:center;margin-top:8px;animation:fs .6s ease .7s both;z-index:1}
+    .urgency-text{font-size:11px;color:#DC2626;font-weight:600;text-align:center;margin-top:6px;z-index:1;display:flex;align-items:center;gap:4px;justify-content:center;flex-shrink:0}
+    .guarantee-text{font-size:11px;color:#4B5563;text-align:center;margin-top:4px;z-index:1;flex-shrink:0}
 
     /* ===== CONFETTI ===== */
     .confetti-container{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
@@ -211,12 +211,12 @@
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 
     /* ===== RESPONSIVE ===== */
-    @media(min-width:481px){.question-title{margin-bottom:28px}.option-card{padding:16px 20px;margin-bottom:12px}.option-text{font-size:16px}.option-icon{width:52px;height:52px;font-size:24px}#quiz{padding-top:calc(12px + env(safe-area-inset-top,0))}.gauge-wrapper{width:100px;height:100px;margin:8px auto 12px}.gauge-pct{font-size:26px}.gauge-sub{font-size:10px}.step-dot{width:40px}.result-badge{width:76px;height:76px;font-size:36px}.btn-cta{font-size:19px;padding:18px 44px}.vsl-container{border-radius:16px;margin-bottom:32px}.stat-pill{font-size:13px;padding:8px 16px}}
-    @media(min-width:769px){.question-section{justify-content:center}#result{padding:48px 32px}}
-    @media(max-width:360px){.hero-headline{font-size:20px}.hero-subheadline{font-size:13px}.question-title{font-size:17px}.option-text{font-size:13px}.option-icon{width:36px;height:36px;font-size:18px;margin-left:8px}.option-card{padding:10px 12px;margin-bottom:6px}.btn-start{padding:14px 24px;font-size:15px}.btn-cta{font-size:15px;padding:14px 24px}.result-headline{font-size:19px}.result-subheadline{font-size:12px}.trust-badges{font-size:11px}.gauge-wrapper{width:76px;height:76px}.gauge-pct{font-size:18px}.gauge-sub{font-size:8px}.step-dot{width:26px;height:5px}.float-pt{font-size:15px}.toast{font-size:13px;padding:10px 16px}.stat-pill{font-size:11px;padding:5px 10px}}
-    @media(max-width:320px){.hero-headline{font-size:18px}.hero-subheadline{font-size:12px;margin-bottom:20px}.question-title{font-size:16px}.option-text{font-size:12px}.option-icon{width:32px;height:32px;font-size:16px}.hero-logo,.loading-logo,.result-logo{font-size:16px}.gauge-wrapper{width:68px;height:68px}.gauge-pct{font-size:16px}}
-    @media(min-height:812px) and (max-width:480px){#hero{padding-top:max(40px,env(safe-area-inset-top,40px))}.hero-logo{margin-bottom:40px}.hero-subheadline{margin-bottom:32px}}
-    @media(max-height:600px) and (max-width:480px){.hero-logo{margin-bottom:16px;font-size:16px}.hero-headline{font-size:20px;margin-bottom:8px}.hero-subheadline{font-size:13px;margin-bottom:20px}.trust-badges{margin-top:12px}.social-proof{margin-top:10px}.gauge-wrapper{width:64px;height:64px;margin:2px auto 4px}.gauge-pct{font-size:15px}.gauge-sub{font-size:7px}.question-title{margin-bottom:10px}.option-card{padding:10px 12px;margin-bottom:5px;min-height:44px}.option-icon{width:34px;height:34px;font-size:17px}.loading-logo{margin-bottom:28px}.result-badge{width:56px;height:56px;font-size:26px;margin-bottom:12px}.vsl-container{margin-bottom:14px}.result-subheadline{margin-bottom:12px}.result-stats{margin-bottom:14px}.steps-bar{padding:8px 12px 2px}.step-dot{width:24px;height:4px}}
+    @media(min-width:481px){.question-title{margin-bottom:28px}.option-card{padding:16px 20px;margin-bottom:12px}.option-text{font-size:16px}.option-icon{width:52px;height:52px;font-size:24px}#quiz{padding-top:calc(12px + env(safe-area-inset-top,0))}.gauge-wrapper{width:100px;height:100px;margin:8px auto 12px}.gauge-pct{font-size:26px}.gauge-sub{font-size:10px}.step-dot{width:40px}.result-badge{width:56px;height:56px;font-size:28px}.result-headline{font-size:clamp(18px,4.5vw,30px)}.result-subheadline{font-size:clamp(13px,3vw,16px)}.btn-cta{font-size:17px;padding:16px 40px}.vsl-container{border-radius:14px}.stat-pill{font-size:12px;padding:5px 12px}}
+    @media(min-width:769px){.question-section{justify-content:center}#result{padding:20px 32px}}
+    @media(max-width:360px){.hero-headline{font-size:20px}.hero-subheadline{font-size:13px}.question-title{font-size:17px}.option-text{font-size:13px}.option-icon{width:36px;height:36px;font-size:18px;margin-left:8px}.option-card{padding:10px 12px;margin-bottom:6px}.btn-start{padding:14px 24px;font-size:15px}.btn-cta{font-size:14px;padding:12px 20px;min-height:44px}.result-logo{font-size:14px;margin-bottom:4px}.result-badge{width:40px;height:40px;font-size:18px;margin-bottom:6px}.result-headline{font-size:15px}.result-subheadline{font-size:11px;margin-bottom:6px}.result-stats{margin-bottom:6px}.trust-badges{font-size:11px}.gauge-wrapper{width:76px;height:76px}.gauge-pct{font-size:18px}.gauge-sub{font-size:8px}.step-dot{width:26px;height:5px}.float-pt{font-size:15px}.toast{font-size:13px;padding:10px 16px}.stat-pill{font-size:10px;padding:3px 8px}}
+    @media(max-width:320px){.hero-headline{font-size:18px}.hero-subheadline{font-size:12px;margin-bottom:20px}.question-title{font-size:16px}.option-text{font-size:12px}.option-icon{width:32px;height:32px;font-size:16px}.hero-logo,.loading-logo,.result-logo{font-size:14px}.gauge-wrapper{width:68px;height:68px}.gauge-pct{font-size:16px}.result-badge{width:36px;height:36px;font-size:16px;margin-bottom:4px}.result-headline{font-size:14px}.result-subheadline{font-size:10px}.btn-cta{font-size:13px;padding:10px 16px;min-height:40px}}
+    @media(min-height:812px) and (max-width:480px){#hero{padding-top:max(40px,env(safe-area-inset-top,40px))}.hero-logo{margin-bottom:40px}.hero-subheadline{margin-bottom:32px}#result{padding:16px 12px}.result-logo{margin-bottom:10px}.result-badge{width:52px;height:52px;font-size:24px;margin-bottom:10px}.result-headline{font-size:clamp(17px,4.5vw,24px);margin-bottom:6px}.result-subheadline{margin-bottom:10px}.result-stats{margin-bottom:10px}.vsl-container{margin-bottom:10px}}
+    @media(max-height:600px) and (max-width:480px){.hero-logo{margin-bottom:16px;font-size:16px}.hero-headline{font-size:20px;margin-bottom:8px}.hero-subheadline{font-size:13px;margin-bottom:20px}.trust-badges{margin-top:12px}.social-proof{margin-top:10px}.gauge-wrapper{width:64px;height:64px;margin:2px auto 4px}.gauge-pct{font-size:15px}.gauge-sub{font-size:7px}.question-title{margin-bottom:10px}.option-card{padding:10px 12px;margin-bottom:5px;min-height:44px}.option-icon{width:34px;height:34px;font-size:17px}.loading-logo{margin-bottom:28px}#result{padding:8px 10px}.result-logo{font-size:13px;margin-bottom:3px}.result-badge{width:32px;height:32px;font-size:14px;margin-bottom:4px;border-width:2px}.result-headline{font-size:14px;margin-bottom:3px}.result-subheadline{font-size:10px;margin-bottom:4px}.result-stats{margin-bottom:4px;gap:4px}.stat-pill{font-size:9px;padding:2px 6px}.vsl-container{margin-bottom:4px;border-radius:8px}.btn-cta{font-size:13px;padding:10px 16px;min-height:38px}.urgency-text{font-size:9px;margin-top:3px}.guarantee-text{font-size:9px;margin-top:2px}.steps-bar{padding:8px 12px 2px}.step-dot{width:24px;height:4px}}
   </style>
 
   <script>
@@ -411,9 +411,9 @@
       var pctScore=Math.round((tp/maxPts)*100);
 
       var d={
-        qualified:{ic:'✓',h:'PARABÉNS! Você tem o perfil IDEAL para ser Closer Digital',s:'Seu perfil está entre os top 5% dos candidatos. Assista o vídeo abaixo e descubra como começar AGORA'},
-        partial:{ic:'⚠',h:'Você TEM potencial para ser Closer Digital!',s:'Com o treinamento certo, você pode desenvolver as habilidades que faltam. Assista o vídeo abaixo'},
-        disqualified:{ic:'✕',h:'Essa profissão pode NÃO ser para você no momento',s:'Antes de desistir, assista esse vídeo. Talvez eu esteja errado.'}
+        qualified:{ic:'✓',h:'PARABÉNS! Você tem o perfil IDEAL para ser Closer Digital',s:'Assista o vídeo abaixo e descubra como começar AGORA'},
+        partial:{ic:'⚠',h:'Você TEM potencial para ser Closer Digital!',s:'Assista o vídeo abaixo e descubra como começar AGORA'},
+        disqualified:{ic:'✕',h:'Essa profissão pode NÃO ser para você no momento',s:'Assista o vídeo abaixo e descubra como começar AGORA'}
       };
 
       var r=d[pf];
