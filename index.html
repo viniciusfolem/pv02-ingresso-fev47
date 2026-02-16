@@ -11,7 +11,13 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="mobile-web-app-capable" content="yes">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://scripts.converteai.net">
+  <link rel="dns-prefetch" href="https://chk.eduzz.com">
   <title>Quiz - Closer no Digital | Descubra seu perfil</title>
+  <!-- Google Tag Manager (delayed for mobile perf) -->
+  <script>window.addEventListener('load',function(){setTimeout(function(){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)})(window,document,'script','dataLayer','GTM-KDKH9M44')},1500)});</script>
+  <!-- End Google Tag Manager -->
   <style>
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
     *{-webkit-tap-highlight-color:transparent}
@@ -42,6 +48,10 @@
   </style>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KDKH9M44"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <main>
     <!-- ===== HERO ===== -->
@@ -411,9 +421,9 @@
       var pctScore=Math.round((tp/maxPts)*100);
 
       var d={
-        qualified:{ic:'✓',h:'Closer no Digital',s:'Assista o vídeo abaixo e descubra como começar <span style="color:#10B981;font-size:1.15em;text-transform:uppercase">AGORA</span>'},
-        partial:{ic:'⚠',h:'Closer no Digital',s:'Assista o vídeo abaixo e descubra como começar <span style="color:#10B981;font-size:1.15em;text-transform:uppercase">AGORA</span>'},
-        disqualified:{ic:'✕',h:'Closer no Digital',s:'Assista o vídeo abaixo e descubra como começar <span style="color:#10B981;font-size:1.15em;text-transform:uppercase">AGORA</span>'}
+        qualified:{ic:'✓',h:'PARABÉNS! Você tem o perfil IDEAL para ser Closer no Digital',s:'Assista o vídeo abaixo e descubra como começar <span style="color:#10B981;font-size:1.15em;text-transform:uppercase">AGORA</span>'},
+        partial:{ic:'⚠',h:'Você TEM potencial para ser Closer no Digital!',s:'Assista o vídeo abaixo e descubra como começar <span style="color:#10B981;font-size:1.15em;text-transform:uppercase">AGORA</span>'},
+        disqualified:{ic:'✕',h:'Essa profissão pode NÃO ser para você no momento',s:'Assista o vídeo abaixo e descubra como começar <span style="color:#10B981;font-size:1.15em;text-transform:uppercase">AGORA</span>'}
       };
 
       var r=d[pf];
