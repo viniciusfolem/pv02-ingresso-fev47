@@ -47,7 +47,7 @@
     <!-- ===== HERO ===== -->
     <section class="section active" id="hero" aria-label="Início do quiz">
       <div class="hero-logo" aria-hidden="true">Closer no Digital</div>
-      <h1 class="hero-headline">Descubra em 60 segundos se você tem o perfil para ganhar de R$ 5 a R$ 15 mil por mês trabalhando de casa como Closer Digital</h1>
+      <h1 class="hero-headline">Closer no Digital</h1>
       <p class="hero-subheadline">Responda 7 perguntas rápidas e descubra se essa profissão é para você</p>
       <button class="btn-start" id="btnStart" type="button">COMEÇAR O QUIZ AGORA</button>
       <div class="trust-badges" aria-label="Informações do quiz">
@@ -179,7 +179,7 @@
     .result-badge.disqualified{background:#FEF2F2;color:#DC2626;border-color:#EF4444}
     .result-headline{font-size:clamp(16px,4.2vw,28px);font-weight:700;text-align:center;margin-bottom:4px;max-width:600px;line-height:1.2;animation:fs .6s ease .15s both;padding:0 4px;z-index:1}
     .result-headline.qualified{color:#047857}.result-headline.partial{color:#B45309}.result-headline.disqualified{color:#DC2626}
-    .result-subheadline{font-size:clamp(11px,2.8vw,15px);color:#4B5563;text-align:center;margin-bottom:8px;max-width:500px;line-height:1.4;animation:fs .6s ease .3s both;padding:0 4px;z-index:1}
+    .result-subheadline{font-size:clamp(15px,3.8vw,20px);color:#1F2937;text-align:center;margin-bottom:8px;max-width:500px;line-height:1.4;animation:fs .6s ease .3s both;padding:0 4px;z-index:1;font-weight:700}
 
     /* Result Stats Pills */
     .result-stats{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-bottom:8px;animation:fs .6s ease .35s both;z-index:1}
@@ -411,9 +411,9 @@
       var pctScore=Math.round((tp/maxPts)*100);
 
       var d={
-        qualified:{ic:'✓',h:'PARABÉNS! Você tem o perfil IDEAL para ser Closer Digital',s:'Assista o vídeo abaixo e descubra como começar AGORA'},
-        partial:{ic:'⚠',h:'Você TEM potencial para ser Closer Digital!',s:'Assista o vídeo abaixo e descubra como começar AGORA'},
-        disqualified:{ic:'✕',h:'Essa profissão pode NÃO ser para você no momento',s:'Assista o vídeo abaixo e descubra como começar AGORA'}
+        qualified:{ic:'✓',h:'Closer no Digital',s:'Assista o vídeo abaixo e descubra como começar <span style="color:#10B981;font-size:1.15em;text-transform:uppercase">AGORA</span>'},
+        partial:{ic:'⚠',h:'Closer no Digital',s:'Assista o vídeo abaixo e descubra como começar <span style="color:#10B981;font-size:1.15em;text-transform:uppercase">AGORA</span>'},
+        disqualified:{ic:'✕',h:'Closer no Digital',s:'Assista o vídeo abaixo e descubra como começar <span style="color:#10B981;font-size:1.15em;text-transform:uppercase">AGORA</span>'}
       };
 
       var r=d[pf];
@@ -421,7 +421,7 @@
       g('resultBadge').textContent=r.ic;
       g('resultHeadline').className='result-headline '+pf;
       g('resultHeadline').textContent=r.h;
-      g('resultSubheadline').textContent=r.s;
+      g('resultSubheadline').innerHTML=r.s;
 
       // Stats pills
       var statsHTML='<div class="stat-pill"><span class="stat-icon">📊</span> Compatibilidade: '+pctScore+'%</div>';
