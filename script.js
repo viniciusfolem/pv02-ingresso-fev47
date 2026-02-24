@@ -331,7 +331,8 @@
       _sb.from('quiz_sessions').update({
         completed_at: new Date().toISOString(),
         result_type: pf, final_score: tp,
-        score_pct: pctScore, had_disqualifier: hd
+        score_pct: pctScore, had_disqualifier: hd,
+        vsl_shown: pf
       }).eq('session_id', _sid).then(null, null);
     });
 
@@ -362,10 +363,33 @@
     } catch(e) { vagas = 5; }
     g('urgencyText').innerHTML = '🔴 Restam apenas <strong>' + vagas + ' vagas</strong> com esse valor';
 
+    // VSL config per profile
+    var vslMap = {
+      qualified: {
+        id: '699da3bd85a22216bd66fc58',
+        src: 'https://scripts.converteai.net/91de7f15-bf35-4102-b055-4a4927e7a9e9/players/699da3bd85a22216bd66fc58/v4/player.js'
+      },
+      partial: {
+        id: '699da35610f8465bfaf75564',
+        src: 'https://scripts.converteai.net/91de7f15-bf35-4102-b055-4a4927e7a9e9/players/699da35610f8465bfaf75564/v4/player.js'
+      },
+      disqualified: {
+        id: '699da693a036c88a251c4a89',
+        src: 'https://scripts.converteai.net/91de7f15-bf35-4102-b055-4a4927e7a9e9/players/699da693a036c88a251c4a89/v4/player.js'
+      }
+    };
+
     tt('result').then(function() {
-      // Load Vturb player script after section is visible
+      // Load the correct Vturb player based on profile
+      var vsl = vslMap[pf];
+      var container = g('vslContainer');
+      var player = document.createElement('vturb-smartplayer');
+      player.id = 'vid-' + vsl.id;
+      player.style.cssText = 'display:block;margin:0 auto;width:100%;';
+      container.appendChild(player);
+
       var vs = document.createElement('script');
-      vs.src = 'https://scripts.converteai.net/0b616c7b-0c7a-4208-96b8-c19a003dfbbf/players/69661328da723d6f868bab31/v4/player.js';
+      vs.src = vsl.src;
       vs.async = true;
       document.head.appendChild(vs);
       
