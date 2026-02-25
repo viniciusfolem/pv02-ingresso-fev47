@@ -1517,6 +1517,44 @@
 
   <!-- Performance Optimized Third-Party Loader -->
   <script src="performance.js" defer></script>
+
+  <!-- UTM Preservation for Eduzz Checkout -->
+  <script>
+  (function() {
+    var params = new URLSearchParams(window.location.search);
+    var utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'];
+
+    utmKeys.forEach(function(key) {
+      var value = params.get(key);
+      if (value) sessionStorage.setItem(key, value);
+    });
+
+    function appendUTMsToCheckout() {
+      document.querySelectorAll('a[href*="eduzz.com"], a[href*="edsn.me"]').forEach(function(link) {
+        try {
+          var url = new URL(link.href);
+          utmKeys.forEach(function(key) {
+            var value = sessionStorage.getItem(key);
+            if (value) url.searchParams.set(key, value);
+          });
+          link.href = url.toString();
+        } catch(e) {}
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', appendUTMsToCheckout);
+    } else {
+      appendUTMsToCheckout();
+    }
+
+    var observer = new MutationObserver(appendUTMsToCheckout);
+    observer.observe(document.body || document.documentElement, {
+      childList: true,
+      subtree: true
+    });
+  })();
+  </script>
 </body>
 
 </html>
